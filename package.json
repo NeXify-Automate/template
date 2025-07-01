@@ -1,0 +1,21 @@
+{
+  "name": "nexify-premium-landing",
+  "version": "1.0.0",
+  "description": "neXify Premium Landing Page",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  },
+  "keywords": [
+    "landing-page",
+    "nexify",
+    "static"
+  ],
+  "author": "",
+  "license": "ISC"
+}

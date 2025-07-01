@@ -1,0 +1,2276 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>neXify - Professionelle KI-Automatisierung für Ihr Business</title>
+    <meta
+      name="description"
+      content="Ihr Partner für individuelle KI-, Web- und Automatisierungslösungen. Maßgeschneiderte Digitalisierung für Ihr Business - von KI-Bots bis E-Commerce."
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="neXify - Professionelle KI-Automatisierung"
+    />
+    <meta
+      property="og:description"
+      content="Maßgeschneiderte Digitalisierung für Ihr Business"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nexify-automate.com" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/heroicons@2.0.16/24/outline/index.css"
+    />
+
+    <style>
+      :root {
+        --nexify-green: #9fc554;
+        --nexify-dark: #1f2937;
+        --nexify-light: #f9fafb;
+      }
+
+      /* Professional glassmorphism */
+      .glass {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      }
+
+      .glass-dark {
+        background: rgba(31, 41, 55, 0.95);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Professional hover effects */
+      .card-hover {
+        transition: all 0.2s ease-in-out;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Subtle animations */
+      .fade-in {
+        animation: fadeIn 0.6s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Professional button styles */
+      .btn-primary {
+        background: var(--nexify-green);
+        border: none;
+        transition: all 0.2s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(159, 197, 84, 0.3);
+        background: #8cb346;
+      }
+
+      .btn-secondary {
+        background: white;
+        border: 1px solid #d1d5db;
+        color: #374151;
+        transition: all 0.2s ease;
+      }
+
+      .btn-secondary:hover {
+        background: #f9fafb;
+        border-color: var(--nexify-green);
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50 text-gray-900">
+    <!-- Professional Navigation -->
+    <nav class="glass fixed top-0 w-full z-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-4">
+            <div class="text-2xl font-bold text-gray-900">
+              ne<span style="color: var(--nexify-green)">X</span>ify
+            </div>
+            <div
+              class="hidden md:block text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full"
+            >
+              Chat it. Automate it.
+            </div>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#services"
+              class="text-gray-700 hover:text-[#9FC554] font-medium transition-colors"
+              >Services</a
+            >
+            <a
+              href="#packages"
+              class="text-gray-700 hover:text-[#9FC554] font-medium transition-colors"
+              >Pakete</a
+            >
+            <a
+              href="#roi-calculator"
+              class="text-gray-700 hover:text-[#9FC554] font-medium transition-colors"
+              >ROI-Rechner</a
+            >
+            <a
+              href="#process"
+              class="text-gray-700 hover:text-[#9FC554] font-medium transition-colors"
+              >Ablauf</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-[#9FC554] font-medium transition-colors"
+              >Kontakt</a
+            >
+            <a
+              href="mailto:support@nexify-automate.com?subject=Unverbindliche%20Beratung"
+              class="btn-primary text-white font-semibold px-6 py-2 rounded-lg"
+            >
+              Beratung anfragen
+            </a>
+          </div>
+
+          <button onclick="toggleMobileMenu()" class="md:hidden text-gray-700">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden glass border-t">
+        <div class="px-6 py-4 space-y-3">
+          <a href="#services" class="block text-gray-700 font-medium py-2"
+            >Services</a
+          >
+          <a href="#packages" class="block text-gray-700 font-medium py-2"
+            >Pakete</a
+          >
+          <a href="#roi-calculator" class="block text-gray-700 font-medium py-2"
+            >ROI-Rechner</a
+          >
+          <a href="#process" class="block text-gray-700 font-medium py-2"
+            >Ablauf</a
+          >
+          <a href="#contact" class="block text-gray-700 font-medium py-2"
+            >Kontakt</a
+          >
+          <a
+            href="mailto:support@nexify-automate.com"
+            class="block btn-primary text-white font-semibold px-6 py-3 rounded-lg text-center mt-4"
+          >
+            Beratung anfragen
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="pt-24 pb-16 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center max-w-4xl mx-auto fade-in">
+            <h1
+              class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+            >
+              Ihr Partner für individuelle KI-, Web- und
+              Automatisierungslösungen
+            </h1>
+
+            <div
+              class="mb-6 text-lg font-semibold"
+              style="color: var(--nexify-green)"
+            >
+              Maßgeschneiderte Digitalisierung
+            </div>
+
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              Ob Website, Onlineshop, KI-Bot oder vollautomatisiertes
+              Kundenportal – Sie erhalten keine Standardlösung, sondern eine
+              exakt auf Ihre Ziele und Abläufe zugeschnittene Lösung. Jedes
+              Projekt startet mit Beratung, geht mit einem klar kalkulierten
+              Angebot weiter und wird mit einem real nutzbaren System
+              abgeschlossen.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a
+                href="mailto:support@nexify-automate.com?subject=Kostenlose%20Erstberatung"
+                class="btn-primary text-white font-semibold px-8 py-3 rounded-lg"
+              >
+                Unverbindliche Beratung & Bedarfsklärung
+              </a>
+              <a
+                href="#packages"
+                class="btn-secondary font-semibold px-8 py-3 rounded-lg"
+              >
+                Fixpreis-Angebote ansehen
+              </a>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div class="glass p-4 rounded-lg card-hover">
+                <div
+                  class="text-2xl font-bold mb-1"
+                  style="color: var(--nexify-green)"
+                >
+                  DSGVO
+                </div>
+                <div class="text-sm text-gray-600">& Rechtssicherheit</div>
+              </div>
+              <div class="glass p-4 rounded-lg card-hover">
+                <div
+                  class="text-2xl font-bold mb-1"
+                  style="color: var(--nexify-green)"
+                >
+                  Modern
+                </div>
+                <div class="text-sm text-gray-600">CI-konforme Umsetzung</div>
+              </div>
+              <div class="glass p-4 rounded-lg card-hover">
+                <div
+                  class="text-2xl font-bold mb-1"
+                  style="color: var(--nexify-green)"
+                >
+                  Erweiterbar
+                </div>
+                <div class="text-sm text-gray-600">& updatefähig</div>
+              </div>
+              <div class="glass p-4 rounded-lg card-hover">
+                <div
+                  class="text-2xl font-bold mb-1"
+                  style="color: var(--nexify-green)"
+                >
+                  Persönlich
+                </div>
+                <div class="text-sm text-gray-600">Ansprechpartner</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Unsere Kernleistungen
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Von der ersten Idee bis zur vollständigen Umsetzung – wir
+              digitalisieren Ihr Business ganzheitlich
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"
+                style="background-color: rgba(159, 197, 84, 0.1)"
+              >
+                <svg
+                  class="w-6 h-6"
+                  style="color: var(--nexify-green)"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Webdesign & Landingpages
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Modern, responsiv, CI/CD-gerecht – inkl. Content, Rechtstexte &
+                Integration von Kontakt- oder KI-Formularbot
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full mr-2"
+                    style="background-color: var(--nexify-green)"
+                  ></span>
+                  Modern & responsiv
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full mr-2"
+                    style="background-color: var(--nexify-green)"
+                  ></span>
+                  Content & Rechtstexte inkl.
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 rounded-full mr-2"
+                    style="background-color: var(--nexify-green)"
+                  ></span>
+                  KI-Formularbot Integration
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17M17 13v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Onlineshops & E-Commerce
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Komplette Shopsysteme (ab 50 Produkte), Anbindung an Payment &
+                Buchhaltung, KI-Bot-Integration
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"
+                  ></span>
+                  Komplette Shopsysteme
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"
+                  ></span>
+                  Payment & Buchhaltung
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"
+                  ></span>
+                  KI-Bot-Integration
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Individuelle KI-Bots
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Für Support, Beratung, Leadgenerierung, Social Media,
+                Bewerbermanagement, Rechnungen usw.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"
+                  ></span>
+                  Support & Beratung
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"
+                  ></span>
+                  Leadgenerierung
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"
+                  ></span>
+                  Bewerbermanagement
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-orange-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Kundenportale & Dashboards
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Multi-Tenant, Reseller-Optionen, White-Label,
+                API-Schnittstellen, Reporting, Mandantenverwaltung
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"
+                  ></span>
+                  Multi-Tenant
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"
+                  ></span>
+                  White-Label
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"
+                  ></span>
+                  API-Schnittstellen
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-pink-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Social-Media- & Content-Automatisierung
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Posting, Monitoring, KI-Textgenerator, Social Scheduling
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-pink-500 rounded-full mr-2"
+                  ></span>
+                  Automatisches Posting
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-pink-500 rounded-full mr-2"
+                  ></span>
+                  KI-Textgenerator
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-pink-500 rounded-full mr-2"
+                  ></span>
+                  Social Monitoring
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-teal-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Schnittstellen & Prozessautomatisierung
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Lexoffice, Salesforce, ERP, E-Mail, Kalender, u. v. m.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-teal-500 rounded-full mr-2"
+                  ></span>
+                  Lexoffice Integration
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-teal-500 rounded-full mr-2"
+                  ></span>
+                  Salesforce & ERP
+                </li>
+                <li class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-teal-500 rounded-full mr-2"
+                  ></span>
+                  E-Mail & Kalender
+                </li>
+              </ul>
+            </div>
+
+            <!-- Service 7 -->
+            <div
+              class="glass p-6 rounded-lg card-hover lg:col-span-3 md:col-span-2"
+            >
+              <div
+                class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6 text-indigo-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Beratung, Support, Weiterentwicklung
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Persönlich, kompetent, digital oder vor Ort
+              </p>
+              <div class="grid grid-cols-3 gap-4 text-sm text-gray-600">
+                <div class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2"
+                  ></span>
+                  Persönliche Beratung
+                </div>
+                <div class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2"
+                  ></span>
+                  Kompetenter Support
+                </div>
+                <div class="flex items-center">
+                  <span
+                    class="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2"
+                  ></span>
+                  Kontinuierliche Weiterentwicklung
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROI Calculator Section -->
+      <section id="roi-calculator" class="py-16 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">ROI-Kalkulator</h2>
+            <p class="text-lg text-gray-300">
+              Berechnen Sie Ihr Einsparpotential mit neXify KI-Automatisierung
+            </p>
+          </div>
+
+          <div class="glass-dark p-8 rounded-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-2"
+                    >Anzahl Mitarbeiter</label
+                  >
+                  <input
+                    type="range"
+                    id="employees"
+                    min="1"
+                    max="100"
+                    value="5"
+                    class="w-full"
+                    onchange="calculateROI()"
+                  />
+                  <span
+                    id="employees-value"
+                    style="color: var(--nexify-green)"
+                    class="font-bold"
+                    >5</span
+                  >
+                  Mitarbeiter
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-2"
+                    >Stunden pro Tag für repetitive Aufgaben</label
+                  >
+                  <input
+                    type="range"
+                    id="hours"
+                    min="1"
+                    max="6"
+                    value="2"
+                    class="w-full"
+                    onchange="calculateROI()"
+                  />
+                  <span
+                    id="hours-value"
+                    style="color: var(--nexify-green)"
+                    class="font-bold"
+                    >2</span
+                  >
+                  Stunden
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-2"
+                    >Durchschnittlicher Stundenlohn (€)</label
+                  >
+                  <input
+                    type="range"
+                    id="hourly-rate"
+                    min="15"
+                    max="80"
+                    value="25"
+                    class="w-full"
+                    onchange="calculateROI()"
+                  />
+                  <span
+                    id="hourly-rate-value"
+                    style="color: var(--nexify-green)"
+                    class="font-bold"
+                    >25</span
+                  >
+                  €/Stunde
+                </div>
+              </div>
+
+              <div class="bg-gray-800 p-6 rounded-lg">
+                <h3
+                  class="text-2xl font-bold mb-6"
+                  style="color: var(--nexify-green)"
+                >
+                  Ihre Einsparungen
+                </h3>
+
+                <div class="space-y-4">
+                  <div class="flex justify-between">
+                    <span>Monatliche Kosten aktuell:</span>
+                    <span id="current-cost" class="font-bold text-red-400"
+                      >€0</span
+                    >
+                  </div>
+
+                  <div class="flex justify-between">
+                    <span>Nach Automatisierung:</span>
+                    <span
+                      id="automated-cost"
+                      class="font-bold"
+                      style="color: var(--nexify-green)"
+                      >€0</span
+                    >
+                  </div>
+
+                  <div class="border-t border-gray-600 pt-4">
+                    <div class="flex justify-between text-lg">
+                      <span>Monatliche Ersparnis:</span>
+                      <span
+                        id="monthly-savings"
+                        class="font-bold"
+                        style="color: var(--nexify-green)"
+                        >€0</span
+                      >
+                    </div>
+
+                    <div class="flex justify-between text-xl font-bold">
+                      <span>Jährliche Ersparnis:</span>
+                      <span
+                        id="yearly-savings"
+                        style="color: var(--nexify-green)"
+                        >€0</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="mt-6 p-4 bg-green-900 bg-opacity-50 rounded-lg">
+                    <p class="text-sm text-center">
+                      <strong
+                        >ROI bereits nach
+                        <span id="roi-months" style="color: var(--nexify-green)"
+                          >3</span
+                        >
+                        Monaten erreicht!</strong
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-8">
+              <a
+                href="mailto:support@nexify-automate.com?subject=ROI-Analyse%20-%20Kostenlose%20Beratung"
+                class="btn-primary text-white font-semibold px-8 py-3 rounded-lg"
+              >
+                Kostenlose ROI-Analyse anfordern
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section id="process" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Ablauf & Servicegarantie
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Von der ersten Beratung bis zur vollständigen Umsetzung – unser
+              bewährter Prozess garantiert Ihren Erfolg
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4"
+                style="background-color: var(--nexify-green)"
+              >
+                1
+              </div>
+              <h3 class="text-lg font-semibold mb-3">
+                Unverbindliche Beratung & Bedarfsklärung
+              </h3>
+              <p class="text-gray-600">
+                Kostenlose Analyse Ihrer Anforderungen und Potentiale
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4"
+                style="background-color: var(--nexify-green)"
+              >
+                2
+              </div>
+              <h3 class="text-lg font-semibold mb-3">
+                Individuelles Fixpreis-Angebot
+              </h3>
+              <p class="text-gray-600">
+                Transparente Kostenkalkulation ohne versteckte Gebühren
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4"
+                style="background-color: var(--nexify-green)"
+              >
+                3
+              </div>
+              <h3 class="text-lg font-semibold mb-3">Kickoff & Feinkonzept</h3>
+              <p class="text-gray-600">
+                Detaillierte Projektplanung und Abstimmung aller Details
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4"
+                style="background-color: var(--nexify-green)"
+              >
+                4
+              </div>
+              <h3 class="text-lg font-semibold mb-3">
+                Umsetzung & Schnittstellenintegration
+              </h3>
+              <p class="text-gray-600">
+                Professionelle Entwicklung mit regelmäßigen Updates
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4"
+                style="background-color: var(--nexify-green)"
+              >
+                5
+              </div>
+              <h3 class="text-lg font-semibold mb-3">
+                Go-Live, Onboarding & Schulung
+              </h3>
+              <p class="text-gray-600">
+                Erfolgreiche Einführung mit umfassendem Training
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <div
+                class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4"
+                style="background-color: var(--nexify-green)"
+              >
+                6
+              </div>
+              <h3 class="text-lg font-semibold mb-3">
+                Laufende Betreuung, Support, Erweiterungen
+              </h3>
+              <p class="text-gray-600">
+                Optional: Kontinuierliche Weiterentwicklung nach Bedarf
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payment Models Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Zahlungs- & Finanzierungsmodelle
+            </h2>
+            <p class="text-lg text-gray-600">
+              Flexible Optionen für jede Unternehmensgröße
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass p-6 rounded-lg card-hover text-center">
+              <h3
+                class="text-xl font-semibold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                Einmalzahlung (klassisch)
+              </h3>
+              <p class="text-gray-600">
+                Alles auf einmal, keine versteckten Folgekosten außer evtl.
+                Hosting
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover text-center">
+              <h3
+                class="text-xl font-semibold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                Klarna Ratenzahlung
+              </h3>
+              <p class="text-gray-600">
+                6, 12 oder 24 Monate – volle Leistung ab der ersten Rate
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover text-center">
+              <h3
+                class="text-xl font-semibold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                Startup-Finanzierung
+              </h3>
+              <p class="text-gray-600">
+                30 % Anzahlung, Rest als Monatsraten (4,5 % eff. Zinsen), ideal
+                für junge Unternehmen
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Packages Section -->
+      <section id="packages" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Unsere Tarife und Pakete
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Transparente Preise für professionelle Lösungen – von Gründern bis
+              Enterprise
+            </p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full glass rounded-lg overflow-hidden">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th
+                    class="px-6 py-4 text-left text-sm font-semibold text-gray-900"
+                  >
+                    Paket
+                  </th>
+                  <th
+                    class="px-6 py-4 text-left text-sm font-semibold text-gray-900"
+                  >
+                    Zielgruppe
+                  </th>
+                  <th
+                    class="px-6 py-4 text-left text-sm font-semibold text-gray-900"
+                  >
+                    Hauptleistungen
+                  </th>
+                  <th
+                    class="px-6 py-4 text-left text-sm font-semibold text-gray-900"
+                  >
+                    Einmalpreis
+                  </th>
+                  <th
+                    class="px-6 py-4 text-left text-sm font-semibold text-gray-900"
+                  >
+                    Klarna-24 Raten*
+                  </th>
+                  <th
+                    class="px-6 py-4 text-left text-sm font-semibold text-gray-900"
+                  >
+                    Startup-Modell**
+                  </th>
+                  <th
+                    class="px-6 py-4 text-left text-sm font-semibold text-gray-900"
+                  >
+                    Aktion
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td
+                    class="px-6 py-4 font-semibold"
+                    style="color: var(--nexify-green)"
+                  >
+                    Startpaket
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-600">
+                    Gründer, Solo-Selbständige
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-600">
+                    Landingpage, KI-Kontaktbot, Rechtstexte, Beratung, Hosting
+                  </td>
+                  <td class="px-6 py-4 font-bold text-lg">590 €</td>
+                  <td class="px-6 py-4">25 €/Monat</td>
+                  <td class="px-6 py-4">177 € Anz., 17 €/Monat</td>
+                  <td class="px-6 py-4">
+                    <a
+                      href="mailto:support@nexify-automate.com?subject=Anfrage%20Startpaket"
+                      class="btn-primary text-white px-4 py-2 rounded text-sm"
+                      >Wählen</a
+                    >
+                  </td>
+                </tr>
+                <tr class="bg-green-50">
+                  <td
+                    class="px-6 py-4 font-semibold"
+                    style="color: var(--nexify-green)"
+                  >
+                    Smart Business
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-600">
+                    Kleine Unternehmen/Startups
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-600">
+                    Website (bis 5 Seiten), KI-Bot, Social-Anbindung,
+                    Automatisierung, 3 Monate Support
+                  </td>
+                  <td class="px-6 py-4 font-bold text-lg">1.290 €</td>
+                  <td class="px-6 py-4">54 €/Monat</td>
+                  <td class="px-6 py-4">387 € Anz., 39 €/Monat</td>
+                  <td class="px-6 py-4">
+                    <a
+                      href="mailto:support@nexify-automate.com?subject=Anfrage%20Smart%20Business"
+                      class="btn-primary text-white px-4 py-2 rounded text-sm"
+                      >Wählen</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="px-6 py-4 font-semibold"
+                    style="color: var(--nexify-green)"
+                  >
+                    Commerce
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-600">
+                    Händler, Coaches, Agenturen
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-600">
+                    Onlineshop, Shop-KI-Bot, ERP/Payment/Versand, 2
+                    Social-Kanäle, 6 Monate Support
+                  </td>
+                  <td class="px-6 py-4 font-bold text-lg">2.590 €</td>
+                  <td class="px-6 py-4">105 €/Monat</td>
+                  <td class="px-6 py-4">777 € Anz., 76 €/Monat</td>
+                  <td class="px-6 py-4">
+                    <a
+                      href="mailto:support@nexify-automate.com?subject=Anfrage%20Commerce"
+                      class="btn-primary text-white px-4 py-2 rounded text-sm"
+                      >Wählen</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="px-6 py-4 font-semibold"
+                    style="color: var(--nexify-green)"
+                  >
+                    Enterprise & White-Label
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-600">
+                    Agenturen, Corporates
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-600">
+                    Multi-Tenant-Portal, White-Label, API, individuelle Module,
+                    Schulung, 12 Monate Support
+                  </td>
+                  <td class="px-6 py-4 font-bold text-lg">5.990 €</td>
+                  <td class="px-6 py-4">242 €/Monat</td>
+                  <td class="px-6 py-4">1.797 € Anz., 171 €/Monat</td>
+                  <td class="px-6 py-4">
+                    <a
+                      href="mailto:support@nexify-automate.com?subject=Anfrage%20Enterprise"
+                      class="btn-primary text-white px-4 py-2 rounded text-sm"
+                      >Wählen</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-8 text-sm text-gray-600">
+            <p>* Klarna-Beispiel: 24 Monate, inkl. Zinsen</p>
+            <p>
+              ** Startup-Modell: 30 % Anzahlung, 24 Monate, 4,5 % eff. Zinsen
+            </p>
+          </div>
+
+          <!-- Inclusive Features -->
+          <div class="mt-12 glass p-6 rounded-lg">
+            <h3
+              class="text-xl font-semibold text-center mb-6"
+              style="color: var(--nexify-green)"
+            >
+              Inklusivleistungen in allen Paketen
+            </h3>
+            <div
+              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center text-sm"
+            >
+              <div>📋 Individuelles Konzept</div>
+              <div>🔒 DSGVO- & Rechtssicherheit</div>
+              <div>🎨 Moderne, CI-konforme Umsetzung</div>
+              <div>🔄 Erweiterbar und updatefähig</div>
+              <div>👤 Persönlicher Ansprechpartner</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Add-ons Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Optionale Add-ons (flexibel zubuchbar)
+            </h2>
+            <p class="text-lg text-gray-600">
+              Erweitern Sie Ihr Paket nach Ihren individuellen Anforderungen
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-2"
+                style="color: var(--nexify-green)"
+              >
+                Zusätzlicher KI-Bot
+              </h3>
+              <div
+                class="text-2xl font-bold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                ab 99 €/Bot
+              </div>
+              <p class="text-gray-600 text-sm">
+                Jede Prozess- oder Kommunikationsaufgabe möglich
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-2"
+                style="color: var(--nexify-green)"
+              >
+                Lexoffice-Integration
+              </h3>
+              <div
+                class="text-2xl font-bold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                290 €
+              </div>
+              <p class="text-gray-600 text-sm">
+                Vollautomatische Buchhaltung & Rechnungen
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-2"
+                style="color: var(--nexify-green)"
+              >
+                Social-Kanal extra
+              </h3>
+              <div
+                class="text-2xl font-bold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                79 €
+              </div>
+              <p class="text-gray-600 text-sm">
+                Facebook, Instagram, WhatsApp usw.
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-2"
+                style="color: var(--nexify-green)"
+              >
+                Hosting & Domain
+              </h3>
+              <div
+                class="text-2xl font-bold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                ab 79 €/Jahr
+              </div>
+              <p class="text-gray-600 text-sm">
+                Sicher, schnell, DSGVO-konform
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-2"
+                style="color: var(--nexify-green)"
+              >
+                Mehrsprachigkeit
+              </h3>
+              <div
+                class="text-2xl font-bold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                ab 99 €
+              </div>
+              <p class="text-gray-600 text-sm">DE/EN/weitere Sprachen</p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-2"
+                style="color: var(--nexify-green)"
+              >
+                SEO-Optimierung
+              </h3>
+              <div
+                class="text-2xl font-bold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                249 €
+              </div>
+              <p class="text-gray-600 text-sm">Texte, OnPage, Beratung</p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-2"
+                style="color: var(--nexify-green)"
+              >
+                Priorisierter Support
+              </h3>
+              <div
+                class="text-2xl font-bold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                39 €/Monat
+              </div>
+              <p class="text-gray-600 text-sm">
+                Schnelle Reaktionszeit, direkter Ansprechpartner
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Features Section -->
+      <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Technische & rechtliche Besonderheiten
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                Provider-Management
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Anbindung OpenAI, Anthropic, Google, automatisches Fallback,
+                Live-Preisanzeige
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                White-Label-Option
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Komplettes Branding, eigene Domain, Resellerfähig
+              </p>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover">
+              <h3
+                class="text-lg font-semibold mb-3"
+                style="color: var(--nexify-green)"
+              >
+                DSGVO & WCAG 2.1 AA
+              </h3>
+              <p class="text-gray-600 text-sm">
+                100 % konform, barrierefrei, auf Wunsch inkl. Audit durch
+                Partneranwalt
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workflow Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Typischer Workflow für Kunden
+            </h2>
+          </div>
+
+          <div class="space-y-6">
+            <div class="glass p-6 rounded-lg card-hover flex items-center">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                style="background-color: var(--nexify-green)"
+              >
+                1
+              </div>
+              <div>
+                <h3 class="font-semibold">
+                  Paket wählen oder individuelle Anfrage senden
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Entscheiden Sie sich für ein Paket oder kontaktieren Sie uns
+                  für eine maßgeschneiderte Lösung
+                </p>
+              </div>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover flex items-center">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                style="background-color: var(--nexify-green)"
+              >
+                2
+              </div>
+              <div>
+                <h3 class="font-semibold">Online-Check-In/Erstgespräch</h3>
+                <p class="text-gray-600 text-sm">
+                  Kostenlose Beratung und detaillierte Bedarfsanalyse
+                </p>
+              </div>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover flex items-center">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                style="background-color: var(--nexify-green)"
+              >
+                3
+              </div>
+              <div>
+                <h3 class="font-semibold">
+                  Angebotsfreigabe, Start mit Anzahlung oder Ratenzahlung
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Transparentes Angebot mit flexiblen Zahlungsoptionen
+                </p>
+              </div>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover flex items-center">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                style="background-color: var(--nexify-green)"
+              >
+                4
+              </div>
+              <div>
+                <h3 class="font-semibold">
+                  Projektumsetzung in enger Abstimmung
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Regelmäßige Updates und Abstimmungen während der Entwicklung
+                </p>
+              </div>
+            </div>
+
+            <div class="glass p-6 rounded-lg card-hover flex items-center">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-4"
+                style="background-color: var(--nexify-green)"
+              >
+                5
+              </div>
+              <div>
+                <h3 class="font-semibold">
+                  Go-Live und Nachbetreuung nach Bedarf
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Erfolgreiche Einführung mit optionaler laufender Betreuung
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section
+        class="py-16 text-white"
+        style="background-color: var(--nexify-green)"
+      >
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-6">
+            Bereit für Ihre digitale Transformation?
+          </h2>
+          <p class="text-lg mb-8 opacity-90">
+            Lassen Sie uns gemeinsam Ihr Business digitalisieren und
+            automatisieren. Kostenlose Beratung, transparente Preise,
+            individuelle Lösungen.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:support@nexify-automate.com?subject=Kostenlose%20Beratung%20anfragen"
+              class="bg-white text-gray-800 font-semibold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              Kostenlose Beratung buchen
+            </a>
+            <a
+              href="#packages"
+              class="bg-green-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-800 transition-colors"
+            >
+              Pakete vergleichen
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <!-- Company Info -->
+          <div>
+            <div class="text-2xl font-bold mb-4">
+              ne<span style="color: var(--nexify-green)">X</span>ify
+            </div>
+            <p class="text-gray-400 mb-6">
+              Ihr Partner für individuelle KI-, Web- und
+              Automatisierungslösungen. Maßgeschneiderte Digitalisierung für
+              nachhaltigen Geschäftserfolg.
+            </p>
+            <div class="text-sm text-gray-500">
+              <p>Willem II Singel 5</p>
+              <p>6041 HP Roermond, Niederlande</p>
+              <p class="mt-2">KvK: 90483944</p>
+              <p>USt-ID: NL865786276B01</p>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >Webdesign & Landingpages</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >Onlineshops & E-Commerce</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >KI-Bots & Automatisierung</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >Kundenportale</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >Prozessautomatisierung</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Packages -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Pakete</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a
+                  href="#packages"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >Startpaket (590€)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#packages"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >Smart Business (1.290€)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#packages"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >Commerce (2.590€)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#packages"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >Enterprise (5.990€)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:support@nexify-automate.com?subject=Individuelles%20Angebot"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >Individuelles Angebot</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Kontakt</h3>
+            <ul class="space-y-3 text-gray-400">
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <a
+                  href="mailto:support@nexify-automate.com"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >support@nexify-automate.com</a
+                >
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-4 h-4 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+                  ></path>
+                </svg>
+                <a
+                  href="https://nexify-automate.com"
+                  class="hover:text-[#9FC554] transition-colors"
+                  >www.nexify-automate.com</a
+                >
+              </li>
+            </ul>
+
+            <div class="mt-6">
+              <a
+                href="mailto:support@nexify-automate.com?subject=Kostenlose%20Beratung"
+                class="btn-primary text-white font-semibold px-6 py-2 rounded-lg inline-block"
+              >
+                Beratung anfragen
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legal Accordion -->
+        <div class="mt-12 pt-8 border-t border-gray-700">
+          <h3 class="text-lg font-semibold mb-4">Rechtliches</h3>
+          <div class="space-y-2">
+            <!-- Impressum -->
+            <div class="accordion-item">
+              <button
+                onclick="toggleAccordion('impressum')"
+                class="w-full text-left py-2 px-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition flex items-center justify-between"
+              >
+                <span class="text-sm font-medium">Impressum</span>
+                <svg
+                  class="w-4 h-4 accordion-icon transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div id="impressum" class="accordion-content">
+                <div
+                  class="p-4 bg-gray-800 rounded-lg mt-2 text-sm text-gray-400"
+                >
+                  <p class="mb-2">
+                    <strong class="text-white"
+                      >neXify – Chat it. Automate it.</strong
+                    >
+                  </p>
+                  <p class="mb-2">Inhaber: Pascal Courbois</p>
+                  <p class="mb-4">
+                    Willem II Singel 5, 6041 HP Roermond, Niederlande
+                  </p>
+
+                  <p class="mb-2">
+                    <strong class="text-white">Kontakt:</strong>
+                  </p>
+                  <p>Telefon: +31 6 133 188 56</p>
+                  <p>E-Mail: support@nexify-automate.com</p>
+                  <p class="mb-4">Website: www.nexify-automate.com</p>
+
+                  <p class="mb-2">
+                    <strong class="text-white">Registrierung:</strong>
+                  </p>
+                  <p>KvK: 90483944</p>
+                  <p class="mb-4">USt-ID: NL865786276B01</p>
+
+                  <p class="mb-4">
+                    Inhaltlich Verantwortlicher gemäß § 55 RStV: Pascal Courbois
+                    (Anschrift wie oben)
+                  </p>
+
+                  <p class="mb-2">
+                    <strong class="text-white">Haftungsausschluss:</strong>
+                  </p>
+                  <p class="mb-3">
+                    Die Inhalte dieser Website wurden mit größter Sorgfalt
+                    erstellt. Für die Richtigkeit, Vollständigkeit und
+                    Aktualität übernehmen wir jedoch keine Gewähr.
+                  </p>
+                  <p class="mb-4">
+                    Links zu externen Websites Dritter liegen außerhalb unseres
+                    Verantwortungsbereichs. Für deren Inhalte übernehmen wir
+                    keine Haftung.
+                  </p>
+
+                  <p class="mb-2">
+                    <strong class="text-white">Streitschlichtung:</strong>
+                  </p>
+                  <p>
+                    Die EU-Kommission stellt eine Plattform zur
+                    Online-Streitbeilegung (OS) bereit:
+                    <a
+                      href="https://ec.europa.eu/consumers/odr"
+                      class="text-[#9FC554] hover:underline"
+                      target="_blank"
+                      >https://ec.europa.eu/consumers/odr</a
+                    >
+                  </p>
+                  <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Datenschutzerklärung -->
+            <div class="accordion-item">
+              <button
+                onclick="toggleAccordion('datenschutz')"
+                class="w-full text-left py-2 px-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition flex items-center justify-between"
+              >
+                <span class="text-sm font-medium">Datenschutzerklärung</span>
+                <svg
+                  class="w-4 h-4 accordion-icon transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div id="datenschutz" class="accordion-content">
+                <div
+                  class="p-4 bg-gray-800 rounded-lg mt-2 text-sm text-gray-400 max-h-80 overflow-y-auto"
+                >
+                  <h4 class="font-semibold text-white mb-3">
+                    Datenschutzerklärung
+                  </h4>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">1. Verantwortlicher</strong>
+                  </p>
+                  <p class="mb-4">
+                    neXify – Chat it. Automate it., Pascal Courbois, Willem II
+                    Singel 5, 6041 HP Roermond, NL<br />
+                    support@nexify-automate.com
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white"
+                      >2. Erhobene Daten & Zwecke</strong
+                    >
+                  </p>
+                  <p class="mb-3">
+                    Wir verarbeiten Ihre personenbezogenen Daten ausschließlich
+                    zur Angebotserstellung, Projektumsetzung, Kommunikation und
+                    Vertragsabwicklung.
+                  </p>
+                  <p class="mb-4">
+                    Es werden nur notwendige Daten erhoben (z. B. Name, E-Mail,
+                    Firmendaten, Zahlungsdetails).
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">3. Rechtsgrundlagen</strong>
+                  </p>
+                  <p class="mb-4">
+                    Die Datenverarbeitung erfolgt auf Basis von Art. 6 Abs. 1
+                    lit. b DSGVO (Vertrag), Art. 6 Abs. 1 lit. f DSGVO
+                    (berechtigtes Interesse) sowie – sofern erteilt – auf Basis
+                    Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">4. Empfänger</strong>
+                  </p>
+                  <p class="mb-3">
+                    Daten werden ausschließlich zur Vertragserfüllung ggf. an
+                    beauftragte Dienstleister und Auftragsverarbeiter (z. B.
+                    Hosting, Buchhaltung, Zahlungsanbieter wie Klarna)
+                    weitergegeben.
+                  </p>
+                  <p class="mb-4">
+                    Drittlandübermittlungen erfolgen nur bei Einbindung von
+                    KI-/Cloud-Anbietern mit DSGVO-konformen Verträgen.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">5. Speicherdauer</strong>
+                  </p>
+                  <p class="mb-4">
+                    Ihre Daten werden so lange gespeichert, wie dies zur
+                    Erfüllung vertraglicher und gesetzlicher Pflichten notwendig
+                    ist.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">6. Ihre Rechte</strong>
+                  </p>
+                  <p class="mb-4">
+                    Sie haben das Recht auf Auskunft, Berichtigung, Löschung,
+                    Einschränkung der Verarbeitung, Widerspruch,
+                    Datenübertragbarkeit sowie das Recht auf Beschwerde bei
+                    einer Aufsichtsbehörde.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">7. Kontakt Datenschutz</strong>
+                  </p>
+                  <p class="mb-4">support@nexify-automate.com</p>
+
+                  <p class="text-xs text-gray-500">
+                    Letzte Aktualisierung: 29.06.2025
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ausschluss des Widerrufsrechts -->
+            <div class="accordion-item">
+              <button
+                onclick="toggleAccordion('widerrufsrecht')"
+                class="w-full text-left py-2 px-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition flex items-center justify-between"
+              >
+                <span class="text-sm font-medium"
+                  >Ausschluss des Widerrufsrechts</span
+                >
+                <svg
+                  class="w-4 h-4 accordion-icon transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div id="widerrufsrecht" class="accordion-content">
+                <div
+                  class="p-4 bg-gray-800 rounded-lg mt-2 text-sm text-gray-400"
+                >
+                  <h4 class="font-semibold text-white mb-3">
+                    Hinweis zum Ausschluss des Widerrufsrechts
+                  </h4>
+
+                  <p class="mb-4">
+                    Alle von neXify – Chat it. Automate it. erbrachten
+                    Leistungen sind individuell für den Kunden konzipiert und
+                    programmiert.
+                  </p>
+
+                  <p class="mb-4">
+                    Ein Widerrufs- oder Rückgaberecht besteht gemäß § 312g Abs.
+                    2 Nr. 1 BGB nicht, da die Leistungen nach
+                    Kundenspezifikation erbracht werden und eindeutig auf die
+                    persönlichen Bedürfnisse zugeschnitten sind. Mit Beginn der
+                    Ausführung entfällt jegliches Widerrufsrecht.
+                  </p>
+
+                  <p>
+                    Für Fragen zu Kulanz oder Fehlern steht unser Support
+                    jederzeit zur Verfügung.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rücknahmebedingungen -->
+            <div class="accordion-item">
+              <button
+                onclick="toggleAccordion('ruecknahme')"
+                class="w-full text-left py-2 px-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition flex items-center justify-between"
+              >
+                <span class="text-sm font-medium">Rücknahmebedingungen</span>
+                <svg
+                  class="w-4 h-4 accordion-icon transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div id="ruecknahme" class="accordion-content">
+                <div
+                  class="p-4 bg-gray-800 rounded-lg mt-2 text-sm text-gray-400"
+                >
+                  <p class="mb-2">
+                    <strong class="text-white">Gegenstand:</strong>
+                  </p>
+                  <p class="mb-4">
+                    neXify – Chat it. Automate it. bietet ausschließlich
+                    maßgeschneiderte, digitale Lösungen an (Websites, KI-Bots,
+                    Portale, Automatisierungen).
+                  </p>
+
+                  <p class="mb-2">
+                    <strong class="text-white"
+                      >Ausschluss der Rücknahme:</strong
+                    >
+                  </p>
+                  <p class="mb-4">
+                    Da alle Leistungen individuell entwickelt und nach
+                    Kundenwunsch umgesetzt werden, ist eine Rücknahme oder
+                    Rückerstattung ausgeschlossen. Siehe auch: Ausschluss des
+                    Widerrufsrechts.
+                  </p>
+
+                  <p class="mb-2">
+                    <strong class="text-white">Kulanzregelung:</strong>
+                  </p>
+                  <p>
+                    Sollten technische Mängel auftreten, prüfen wir eine
+                    kostenlose Nachbesserung oder eine Teilgutschrift im
+                    Einzelfall. Kontakt: support@nexify-automate.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- AGB -->
+            <div class="accordion-item">
+              <button
+                onclick="toggleAccordion('agb')"
+                class="w-full text-left py-2 px-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition flex items-center justify-between"
+              >
+                <span class="text-sm font-medium">AGB</span>
+                <svg
+                  class="w-4 h-4 accordion-icon transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div id="agb" class="accordion-content">
+                <div
+                  class="p-4 bg-gray-800 rounded-lg mt-2 text-sm text-gray-400 max-h-80 overflow-y-auto"
+                >
+                  <h4 class="font-semibold text-white mb-3">
+                    Allgemeine Geschäftsbedingungen (AGB)
+                  </h4>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">1. Geltungsbereich</strong>
+                  </p>
+                  <p class="mb-4">
+                    Diese AGB gelten für sämtliche Angebote, Verträge und
+                    Leistungen zwischen neXify – Chat it. Automate it. und dem
+                    Kunden, sofern nicht schriftlich abweichend vereinbart.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">2. Vertragsgegenstand</strong>
+                  </p>
+                  <p class="mb-4">
+                    Gegenstand des Vertrags ist die individuelle Entwicklung und
+                    Bereitstellung von Web- und KI-Lösungen, Automatisierungen
+                    sowie begleitende Beratung.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white"
+                      >3. Angebot & Vertragsschluss</strong
+                    >
+                  </p>
+                  <p class="mb-4">
+                    Das Angebot erfolgt nach ausführlicher Beratung und
+                    Bedarfsklärung. Der Vertrag kommt mit schriftlicher
+                    Angebotsannahme oder Freigabe durch den Kunden zustande.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white"
+                      >4. Preise & Zahlungsbedingungen</strong
+                    >
+                  </p>
+                  <p class="mb-3">
+                    Alle Preise sind netto zzgl. USt. Zahlungen: Einmalzahlung,
+                    Klarna-Ratenzahlung (bis 24 Monate) oder
+                    Startup-Finanzierung (30 % Anzahlung, 24 Monatsraten, 4,5 %
+                    eff. Zinsen).
+                  </p>
+                  <p class="mb-4">
+                    Leistungsbeginn nach Zahlungseingang der Anzahlung.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">5. Leistungszeit</strong>
+                  </p>
+                  <p class="mb-4">
+                    Projektbeginn und Zeitplan werden individuell vereinbart.
+                    Verzögerungen durch Dritte oder nicht rechtzeitig
+                    bereitgestellte Kundendaten verlängern die Lieferzeit
+                    entsprechend.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">6. Gewährleistung</strong>
+                  </p>
+                  <p class="mb-3">
+                    Für alle individuell erstellten Systeme gilt: Wir
+                    garantieren Funktionalität bei Go-Live. Mängel melden Sie
+                    bitte unverzüglich, wir leisten Nachbesserung.
+                  </p>
+                  <p class="mb-4">
+                    Für externe Systeme, Plugins oder KI-Dienste kann keine
+                    dauerhafte Gewähr übernommen werden.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">7. Haftung</strong>
+                  </p>
+                  <p class="mb-4">
+                    Haftung besteht ausschließlich für Vorsatz und grobe
+                    Fahrlässigkeit. Für Folgeschäden, Datenverluste oder
+                    Systemausfälle durch Dritte/Provider/Cloud keine Haftung.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">8. Nutzungsrechte</strong>
+                  </p>
+                  <p class="mb-4">
+                    Kunde erhält ein einfaches Nutzungsrecht an der jeweils
+                    gelieferten Lösung. Weitergabe, Vervielfältigung oder
+                    Verkauf ist nur mit ausdrücklicher Genehmigung gestattet.
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">9. Datenschutz</strong>
+                  </p>
+                  <p class="mb-4">
+                    Sämtliche Kundendaten werden streng vertraulich und gemäß
+                    DSGVO behandelt (siehe Datenschutzerklärung).
+                  </p>
+
+                  <p class="mt-3 mb-2">
+                    <strong class="text-white">10. Schlussbestimmungen</strong>
+                  </p>
+                  <p>
+                    Es gilt niederländisches Recht. Gerichtsstand ist Roermond.
+                    Sollte eine Bestimmung unwirksam sein, bleibt der Vertrag im
+                    Übrigen wirksam.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Barrierefreiheit -->
+            <div class="accordion-item">
+              <button
+                onclick="toggleAccordion('barrierefreiheit')"
+                class="w-full text-left py-2 px-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition flex items-center justify-between"
+              >
+                <span class="text-sm font-medium">Barrierefreiheit</span>
+                <svg
+                  class="w-4 h-4 accordion-icon transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div id="barrierefreiheit" class="accordion-content">
+                <div
+                  class="p-4 bg-gray-800 rounded-lg mt-2 text-sm text-gray-400"
+                >
+                  <p class="mb-4">
+                    neXify – Chat it. Automate it. verpflichtet sich, sämtliche
+                    Webangebote und digitalen Lösungen barrierefrei nach WCAG
+                    2.1 AA und DSGVO zu gestalten.
+                  </p>
+
+                  <p>
+                    Für Feedback oder Hinweise wenden Sie sich an
+                    support@nexify-automate.com oder +31 6 133 188 56.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cookie-Hinweis -->
+            <div class="accordion-item">
+              <button
+                onclick="toggleAccordion('cookies')"
+                class="w-full text-left py-2 px-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition flex items-center justify-between"
+              >
+                <span class="text-sm font-medium">Cookie-Hinweis</span>
+                <svg
+                  class="w-4 h-4 accordion-icon transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  ></path>
+                </svg>
+              </button>
+              <div id="cookies" class="accordion-content">
+                <div
+                  class="p-4 bg-gray-800 rounded-lg mt-2 text-sm text-gray-400"
+                >
+                  <p>
+                    Unsere Website verwendet ausschließlich technisch notwendige
+                    Cookies. Es findet kein Tracking oder Profiling statt.
+                    Details siehe Datenschutzerklärung.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+          <h3 class="text-lg font-semibold mb-4">Kontakt</h3>
+          <p class="text-gray-400 mb-2">support@nexify-automate.com</p>
+          <p class="text-gray-400">www.nexify-automate.com</p>
+        </div>
+
+        <!-- Copyright -->
+        <div
+          class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2025 neXify – Chat it. Automate it. Alle Rechte vorbehalten.
+          </p>
+          <p class="mt-1 text-sm">
+            Wir digitalisieren, automatisieren und individualisieren Ihren
+            Geschäftserfolg.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleAccordion(id) {
+        const content = document.getElementById(id);
+        const button = content.previousElementSibling;
+        const icon = button.querySelector(".accordion-icon");
+
+        // Close all other accordions
+        const allContents = document.querySelectorAll(".accordion-content");
+        const allIcons = document.querySelectorAll(".accordion-icon");
+
+        allContents.forEach((otherContent, index) => {
+          if (
+            otherContent !== content &&
+            otherContent.style.display === "block"
+          ) {
+            otherContent.style.display = "none";
+            allIcons[index].style.transform = "rotate(0deg)";
+          }
+        });
+
+        // Toggle current accordion
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+          icon.style.transform = "rotate(90deg)";
+        } else {
+          content.style.display = "none";
+          icon.style.transform = "rotate(0deg)";
+        }
+      }
+
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("hidden");
+        } else {
+          mobileMenu.classList.add("hidden");
+        }
+      }
+
+      // ROI Calculator
+      function calculateROI() {
+        const employees = document.getElementById("employees").value;
+        const hours = document.getElementById("hours").value;
+        const hourlyRate = document.getElementById("hourly-rate").value;
+
+        // Update display values
+        document.getElementById("employees-value").textContent = employees;
+        document.getElementById("hours-value").textContent = hours;
+        document.getElementById("hourly-rate-value").textContent = hourlyRate;
+
+        // Calculate costs
+        const workingDaysPerMonth = 22;
+        const currentMonthlyCost =
+          employees * hours * hourlyRate * workingDaysPerMonth;
+        const automationSavings = 0.6; // 60% automation savings
+        const automatedCost = currentMonthlyCost * (1 - automationSavings);
+        const monthlySavings = currentMonthlyCost - automatedCost;
+        const yearlySavings = monthlySavings * 12;
+
+        // Average project cost estimation based on company size
+        let averageProjectCost = 1290; // Smart Business as baseline
+        if (employees <= 2)
+          averageProjectCost = 590; // Startpaket
+        else if (employees <= 10)
+          averageProjectCost = 1290; // Smart Business
+        else if (employees <= 50)
+          averageProjectCost = 2590; // Commerce
+        else averageProjectCost = 5990; // Enterprise
+
+        const roiMonths = Math.max(
+          1,
+          Math.ceil(averageProjectCost / monthlySavings),
+        );
+
+        // Update display
+        document.getElementById("current-cost").textContent =
+          `€${currentMonthlyCost.toLocaleString()}`;
+        document.getElementById("automated-cost").textContent =
+          `€${automatedCost.toLocaleString()}`;
+        document.getElementById("monthly-savings").textContent =
+          `€${monthlySavings.toLocaleString()}`;
+        document.getElementById("yearly-savings").textContent =
+          `€${yearlySavings.toLocaleString()}`;
+        document.getElementById("roi-months").textContent = roiMonths;
+      }
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize accordion - hide all content by default
+        const accordionContents =
+          document.querySelectorAll(".accordion-content");
+        accordionContents.forEach((content) => {
+          content.style.display = "none";
+        });
+
+        // Initialize ROI Calculator
+        calculateROI();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
